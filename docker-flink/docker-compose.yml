@@ -18,6 +18,7 @@ services:
     depends_on:
       - jobmanager
     command: taskmanager
+    # 链接到其它容器，并启别名jobmanager
     links:
       - "jobmanager:jobmanager"
     environment:
